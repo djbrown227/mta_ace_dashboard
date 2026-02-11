@@ -42,11 +42,11 @@ export default function DashboardPage() {
       <div className="flex items-center justify-center h-screen bg-background text-black text-2xl px-4 text-center">
         <TypingText
           text={[
-            "Welcome to the MTA ACE Bus Dashboard: Explore program impact",
+            "Welcome to the MTA ACE Bus Dashboard",
             ""
           ]}
           typingSpeed={70}
-          pauseDuration={1500}
+          pauseDuration={1100}
           loop={false}
           showCursor
           cursorCharacter="|"
