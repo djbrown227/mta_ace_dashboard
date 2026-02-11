@@ -102,10 +102,12 @@ export function SpeedImpactHistogram() {
     const interpretation = (d: any) => {
       if (d.x1 <= -10) return "substantial speed declines";
       if (d.x1 < 0) return "modest speed declines";
+      if (d.x0 < 0 && d.x1 === 0) return "modest speed declines"; // <- add this
       if (d.x0 < 0 && d.x1 > 0) return "no meaningful change in speed";
       if (d.x1 <= 10) return "moderate speed improvements";
       return "large speed improvements";
     };
+    
 
     // -----------------------------
     // Scales
