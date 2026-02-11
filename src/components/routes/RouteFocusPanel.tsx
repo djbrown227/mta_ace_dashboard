@@ -2,7 +2,7 @@
 
 import { useDashboardStore } from "@/store/dashboardStore";
 import { routeSummary } from "@/data/mock/route_summary";
-import { hourlyProfiles } from "@/data/mock/hourlyProfiles";
+//import { hourlyProfiles } from "@/data/mock/hourlyProfiles";
 import * as Plot from "@observablehq/plot";
 import { useEffect, useRef } from "react";
 
@@ -54,9 +54,9 @@ export function RouteFocusPanel() {
     ? routeSummary.find((r) => r.routeId === selectedRouteId)
     : undefined;
 
-  const hourlyData = selectedRouteId
-    ? hourlyProfiles.filter((h) => h.routeId === selectedRouteId)
-    : [];
+  //const hourlyData = selectedRouteId
+  //  ? hourlyProfiles.filter((h) => h.routeId === selectedRouteId)
+  //  : [];
 
   /* -----------------------------
      Render
