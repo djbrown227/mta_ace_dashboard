@@ -93,20 +93,20 @@ export function SpeedImpactHistogram() {
     const binText = (d: any) => {
       if (d.x0 === -Infinity) return "more than 5% slower";
       if (d.x1 === Infinity) return "more than 15% faster";
-      if (d.x0 < 0 && d.x1 <= 0)
-        return `${Math.abs(d.x1)}%–${Math.abs(d.x0)}% slower`;
+      if (d.x0 < 0 && d.x1 <= 0) return `${Math.abs(d.x1)}%–${Math.abs(d.x0)}% slower`;
       if (d.x0 < 0 && d.x1 > 0) return "little to no change";
       return `${d.x0}%–${d.x1}% faster`;
     };
-
+    
     const interpretation = (d: any) => {
-      if (d.x1 <= -10) return "substantial speed declines";
-      if (d.x1 < 0) return "modest speed declines";
-      if (d.x0 < 0 && d.x1 === 0) return "modest speed declines"; // <- add this
+      if (d.x0 === -Infinity || d.x1 <= -10) return "substantial speed declines";
+      if (d.x0 < 0 && d.x1 <= 0) return "modest speed declines";
       if (d.x0 < 0 && d.x1 > 0) return "no meaningful change in speed";
-      if (d.x1 <= 10) return "moderate speed improvements";
-      return "large speed improvements";
+      if (d.x0 >= 0 && d.x1 <= 10) return "moderate speed improvements";
+      if (d.x0 >= 0 && d.x1 > 10) return "large speed improvements";
+      return "";
     };
+    
     
 
     // -----------------------------
