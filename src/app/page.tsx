@@ -80,7 +80,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-[1.5fr_1fr] gap-4">
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>ACE Program Fails to Deliver Significant Route-Level Speed Gains</CardTitle>
+              <CardTitle>ACE Program’s Impact on Bus Speed</CardTitle>
             </CardHeader>
             <CardContent className="w-full h-120">
               <SpeedImpactHistogram />
@@ -89,7 +89,7 @@ export default function DashboardPage() {
 
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>Peak and Off-Peak Speeds Show Marginal Program Effect</CardTitle>
+              <CardTitle>Peak and Off-Peak Speed Change Post ACE</CardTitle>
             </CardHeader>
             <CardContent>
             <PeakOffPeakBoxD3 />
@@ -103,7 +103,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-[1.5fr_1fr] gap-4">
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>ACE Program’s Impact on Journey Quality is Limited</CardTitle>
+              <CardTitle>ACE Program’s Impact on Journey Quality</CardTitle>
             </CardHeader>
             <CardContent className="w-full h-120">
               <JrnyHistogram />
@@ -112,7 +112,7 @@ export default function DashboardPage() {
 
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>Peak and Off-Peak Reliability Show Marginal Program Effect</CardTitle>
+              <CardTitle>Peak and Off-Peak Reliability Change Post ACE</CardTitle>
             </CardHeader>
             <CardContent>
             <JourneyBoxPlot />
@@ -125,7 +125,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-[1.5fr_1fr] gap-4">
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>ACE Program’s Impact on Journey Quality is Limited</CardTitle>
+              <CardTitle>Speed and Reliability Changes Post ACE</CardTitle>
             </CardHeader>
             <CardContent className="w-full h-120">
               <SpeedJrneyPerf />
@@ -134,7 +134,7 @@ export default function DashboardPage() {
 
           <Card>
             <CardHeader className="text-2xl font-bold">
-              <CardTitle>Peak and Off-Peak Reliability Show Marginal Program Effect</CardTitle>
+              <CardTitle>Half Improving, a Quarter Declining: What’s Happening Across Bus Routes?</CardTitle>
             </CardHeader>
             <CardContent>
             <SpeedReliabilityPie />
