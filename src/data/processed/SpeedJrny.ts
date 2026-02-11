@@ -1,5 +1,5 @@
 
-export type SpeedJrny = {
+export type speedJrnyRow = {
   routeId: string;
   speedOverall: number | null;
   speedPeak: number | null;
@@ -9,7 +9,7 @@ export type SpeedJrny = {
   jrnyOffPeak: number | null;
 };
 
-export const speedJrny: SpeedJrnyRow[] = [
+export const speedJrny: speedJrnyRow[] = [
   {
     routeId: "B11",
     speedOverall: 1.63,

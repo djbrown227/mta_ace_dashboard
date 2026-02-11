@@ -1,13 +1,8 @@
 import type { NextConfig } from "next";
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/mta_ace_dashboard",
-  assetPrefix: "/mta_ace_dashboard/",
-  images: {
-    unoptimized: true,
-  },
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  reactCompiler: true,
 };
 
-
-module.exports = nextConfig;
+export default nextConfig;
