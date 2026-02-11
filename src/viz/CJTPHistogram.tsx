@@ -73,14 +73,17 @@ export function JrnyHistogram() {
       if (d.x0 < 0 && d.x1 > 0) return "little to no change in journeys";
       return `${d.x0}%–${d.x1}% better journeys`;
     };
-
+    
     const interpretation = (d: any) => {
-      if (d.x1 <= -10) return "substantial deterioration in customer journeys";
-      if (d.x1 < 0) return "modest deterioration in journeys";
+      if (d.x0 === -Infinity || d.x1 <= -10)
+        return "substantial deterioration in customer journeys";
+      if (d.x0 < 0 && d.x1 <= 0) return "modest deterioration in journeys";
       if (d.x0 < 0 && d.x1 > 0) return "no meaningful change in journeys";
-      if (d.x1 <= 10) return "moderate journey improvements";
-      return "large journey improvements";
+      if (d.x0 >= 0 && d.x1 <= 10) return "moderate journey improvements";
+      if (d.x0 >= 0 && d.x1 > 10) return "large journey improvements";
+      return "";
     };
+    
 
     const x = d3
       .scaleBand()
