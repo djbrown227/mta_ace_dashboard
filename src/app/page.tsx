@@ -46,7 +46,7 @@ export default function DashboardPage() {
             ""
           ]}
           typingSpeed={70}
-          pauseDuration={900}
+          pauseDuration={800}
           loop={false}
           showCursor
           cursorCharacter="|"
