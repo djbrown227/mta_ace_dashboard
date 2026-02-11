@@ -33,7 +33,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     // Show intro for 4 seconds on initial mount
-    const timer = setTimeout(() => setShowDashboard(true), 6000);
+    const timer = setTimeout(() => setShowDashboard(true), 4000);
     return () => clearTimeout(timer);
   }, []);
 
